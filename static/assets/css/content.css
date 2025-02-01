@@ -1,0 +1,25 @@
+#content {
+  margin-left: 35%;
+  max-width: 54em; /* Work out how to make equal with left margin */
+  padding: 8em 4em 4em 4em;
+  width: calc(100% - 35%);
+
+  display: flex;
+  flex-flow: column;
+}
+
+#content > section {
+  border-top: solid 2px var(--section-border-colour);
+  margin: 4em 0 0 0;
+  padding: 4em 0 0 0;
+}
+
+#content > section:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#content > section:last-child {
+  min-height: 100vh;
+}

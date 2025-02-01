@@ -1,0 +1,115 @@
+/* Header */
+#header {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -moz-align-items: -moz-flex-end;
+  -ms-align-items: -ms-flex-end;
+  align-items: flex-end;
+
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+
+  background-color: var(--header-background-colour);
+  background-attachment: scroll, scroll;
+  background-image: url("images/overlay.png"), linear-gradient(to top, var(--header-background-gradient));
+  background-position: top left, top left;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100%;
+
+  color: var(--header-base-colour);
+
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 8em 4em;
+  position: fixed;
+  width: 35%;
+  height: 100%;
+
+  text-align: right;
+}
+
+#header>* {
+  -moz-flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+#header>.inner {
+  -moz-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  margin: 0 0 2em 0;
+}
+
+#header h1 {
+  color: var(--header-title-colour);
+  margin-bottom: 0;
+}
+
+#header h3 {
+  color: var(--header-base-colour);
+  margin-bottom: 0;
+  font-size: 0.81em;
+  padding-right: 0.1em;
+}
+
+/* Inner */
+#header > .inner {
+  -moz-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  margin: 0 0 2em 0;
+}
+
+.inner {
+  display: block;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* Footer */
+#footer .icons {
+    margin: 1em 0 0 0;
+}
+
+#footer .copyright {
+  color: var(--icons-base-colour);
+  font-family: var(--default-header-font);
+  font-size: 1em;
+  list-style: none;
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+#footer .copyright li {
+  border-left: solid 1px var(--icons-base-colour);
+  display: inline-block;
+  line-height: 1em;
+  font-size: 0.8em;
+  margin-left: 0.75em;
+  padding-left: 0.75em;
+}
+
+#footer .copyright li:first-child {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}

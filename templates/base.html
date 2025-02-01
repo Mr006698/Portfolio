@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <!-- Title -->
+  <title>{% block title %}{% endblock %}</title>
+
+  {% block styles %}
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+  <!-- Bootstrap css -->
+  {{ bootstrap.load_css() }}
+
+  <!-- Google Fonts -->
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=
+    Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/variables.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/header.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/content.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/screens.css') }}">
+  {% endblock %}
+
+  {% endblock %}
+</head>
+
+<body class="is-preload" id="base">
+  <!-- Content -->
+  {% block content %}
+  {% endblock %}
+  {% block scripts %}
+  <!-- Bootstrap js -->
+  {{ bootstrap.load_js() }}
+
+  <!-- Custom js -->
+  <script src="https://kit.fontawesome.com/8446b9e3e2.js" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.poptrox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+  {% endblock %}
+</body>

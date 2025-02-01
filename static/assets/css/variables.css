@@ -1,0 +1,27 @@
+:root {
+    --default-background-colour: #fff;
+
+    --default-font-colour: #50555E;
+    --default-header-font-colour: #3C4043;
+
+    --default-font: "Muli", Helvetica, sans-serif;
+    --default-header-font: "Saira Condensed", Helvetica, sans-serif;
+
+    --section-border-colour: #efefef;
+
+    --header-background-gradient: #0a0b0c, #0f0d0e, #181618, #1f1d21, #25252a,
+    #2b2d33, #31353b, #373d44, #3f474e, #485258, #515c62, #5a676c;
+    --header-background-colour: #0a0b0c;
+    --header-title-colour: #fff;
+    --header-base-colour: rgba(255, 255, 255, 0.5);
+
+    --link-base-colour: rgba(255, 255, 255, 0.5);
+    --link-hover-colour: #56B78E;
+    --link-active-colour: #fff;
+
+    --icons-base-colour: rgba(255, 255, 255, 0.5);
+    --icons-hover-colour: #56B78E;
+
+    --input-text-colour: #333;
+    --input-background-colour: #C7CCCF;
+}
