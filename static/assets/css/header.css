@@ -64,6 +64,10 @@
   padding: 0 0.1em 1.5em 0;
 }
 
+#header .title {
+  padding-bottom: 0.7em;
+}
+
 /* Inner */
 #header > .inner {
   -moz-flex-grow: 1;

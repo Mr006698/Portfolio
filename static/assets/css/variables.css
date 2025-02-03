@@ -30,4 +30,8 @@
     --button-text-colour: #71767b;
     --button-hover-colour: #56B78E; /*#00C6AF;*/
     --button-alt-hover-colour: #007C4D;
+
+    --menu-button-default-colour: #fff;
+    --menu-button-hover-colour: #56B78E;
+    --menu-button-alt-hover-colour: #007C4D;
 }

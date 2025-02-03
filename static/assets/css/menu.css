@@ -1,0 +1,192 @@
+/* CSS - JAVASCRIPT MENU BAR */
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0em 0 0 0;
+  color: var(--menu-button-default-colour);
+	font-size: 1.75em;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  color: var(--menu-button-hover-colour);
+}
+
+.menu-btn:active {
+	color: var(--menu-button-alt-hover-colour);
+}
+
+.menu-list {
+  list-style: none;
+}
+
+li.menu-link a {
+  font-family: var(--default-font);
+  font-size: 0.95em;
+  color: var(--link-base-colour);
+  line-height: 1.5em;
+  border-bottom: none;
+
+  transition: 0.0s; /* Slide menu */
+}
+
+li.menu-link a:hover {
+  color: var(--link-hover-colour);
+}
+
+li.menu-link a:active {
+  color: var(--link-active-colour);
+}
+
+/* XXLarge */
+.menu-btn {
+	display: none;
+}
+
+.menu-list {
+	color: var(--menu-link-colour);
+	padding: 0em;
+	margin: 0em;
+	height: auto; /* For slide menu */
+	overflow-y: visible; /* For slide menu */
+	transition: 0.0s; /* For slide menu */
+}
+
+/* #content>section {
+	scroll-margin-top: 84px;
+}
+
+#content>section:first-child {
+	scroll-margin-top: 174px;
+} */
+
+/* XLarge */
+@media screen and (max-width: 1800px) {
+
+	.menu-btn {
+		display: none;
+	}
+
+	.menu-list {
+		padding: 0em;
+		margin: 0em;
+		height: auto; /* For slide menu */
+		overflow-y: visible; /* For slide menu */
+		transition: 0.0s; /* For slide menu */
+	}
+
+	/* #content>section {
+		scroll-margin-top: 62px;
+	}
+
+	#content>section:first-child {
+		scroll-margin-top: 130px;
+	} */
+}
+
+/* Large */
+@media screen and (max-width: 1200px) {
+
+	.menu-btn {
+		display: none;
+	}
+
+	.menu-list {
+		padding: 0em;
+		margin: 0em;
+		height: auto; /* For slide menu */
+		overflow-y: visible; /* For slide menu */
+		transition: 0.0s; /* For slide menu */
+	}
+
+	/* #content>section {
+		scroll-margin-top: 30px;
+	}
+
+	#content>section:first-child {
+		scroll-margin-top: 100px;
+	} */
+}
+
+/* Medium */
+@media screen and (max-width: 992px) {
+
+	#header .title {
+		padding-bottom: 0.2em;
+	}
+
+	/* div.menu-title {
+		margin-bottom: 0.0em;
+		flex-direction: row;
+	}
+
+	div.menu-title h2 {
+		padding: 0.2em 0em 0em 0em;
+	}
+
+	div.menu-title h6 {
+		padding: 2.1em 0em 0em 1em;
+	} */
+
+	.menu-btn {
+		display: inline;
+	}
+
+	.menu-list {
+		height: 0px; /* Close the menu bar */
+		overflow-y: hidden; /* For slide menu */
+		transition: 0.4s; /* For slide menu */
+	}
+
+	/* #content>section {
+		scroll-margin-top: 2.5em;
+	}
+
+	#content>section:first-child {
+		scroll-margin-top: 8.5em;
+		padding-top: 5px;
+	} */
+}
+
+/* Small */
+@media screen and (max-width: 736px) {
+
+	/* div.inner h2 {
+		padding: 0.2em 0em 0em 0em;
+	}
+
+	div.menu-title h6 {
+		display: none;
+	} */
+	
+	.menu-btn {
+		display: inline;
+	}
+
+	.menu-list {
+		height: 0px; /* Close the menu bar */
+		overflow-y: hidden; /* For slide menu */
+		transition: 0.4s; /* For slide menu */
+	}
+
+	/* div.inner h2 {
+		font-size: 2em;
+	}
+
+	#content>section {
+		scroll-margin-top: 4em;
+	}
+
+	#content>section:first-child {
+		padding-top: 4em;
+	} */
+}
+
+/* XSmall */
+@media screen and (max-width: 480px) {
+
+	/* div.inner h2 {
+		padding: 0.4em 0em 0em 0em;
+		font-size: 1.7em;
+	} */
+}
