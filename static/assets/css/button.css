@@ -1,0 +1,39 @@
+/* Button */
+.default-button {
+  background-color: transparent;
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+  border: solid 1px var(--button-border-colour);
+  border-radius: 0.5em;
+
+  cursor: pointer;
+  display: inline-block;
+
+  min-width: 8.5em;
+  height: 2.75em;
+
+  font-size: 0.85em;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  color: var(--button-text-colour)
+}
+
+.default-button:hover {
+  border-color: var(--button-hover-colour);
+  color: var(--button-hover-colour);
+}
+
+.default-button:active {
+  border-color: var(--button-alt-hover-colour);
+  color: var(--button-alt-hover-colour);
+}
+
+@media screen and (max-width: 450px) {
+  .default-button {
+    width: 100%;
+  }
+}

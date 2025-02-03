@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/header.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/content.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/screens.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/button.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/modals.css') }}">
   {% endblock %}
 
   {% endblock %}
@@ -36,8 +38,8 @@
 
 <body class="is-preload" id="base">
   <!-- Content -->
-  {% block content %}
-  {% endblock %}
+  {% block content %}{% endblock %}
+
   {% block scripts %}
   <!-- Bootstrap js -->
   {{ bootstrap.load_js() }}
@@ -49,5 +51,6 @@
   <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
   <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/scripts.js') }}"></script>
   {% endblock %}
 </body>

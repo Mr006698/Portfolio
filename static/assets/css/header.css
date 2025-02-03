@@ -14,11 +14,6 @@
   -ms-align-items: -ms-flex-end;
   align-items: flex-end;
 
-  -moz-justify-content: space-between;
-  -webkit-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-
   background-color: var(--header-background-colour);
   background-attachment: scroll, scroll;
   background-image: url("images/overlay.png"), linear-gradient(to top, var(--header-background-gradient));
@@ -65,7 +60,8 @@
   color: var(--header-base-colour);
   margin-bottom: 0;
   font-size: 0.81em;
-  padding-right: 0.1em;
+  line-height: 0em;
+  padding: 0 0.1em 1.5em 0;
 }
 
 /* Inner */

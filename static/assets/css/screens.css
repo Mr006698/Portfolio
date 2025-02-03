@@ -1,9 +1,9 @@
 /* XXL */
 @media screen and (max-width: 1800px) {
 
-  /* body, input, select, textarea {
-    font-size: 16pt !important;
-  } */
+  body, input, select, textarea {
+    font-size: 12pt !important;
+  }
 }
 
 /* XL */
@@ -33,28 +33,36 @@
     width: calc(100% - 30%);
   }
 
+  #content > section:last-child {
+    min-height: calc(100vh - 4.9em);
+  }
+
 }
 
 /* L */
 @media screen and (max-width: 992px) {
 
   #header {
-    background-attachment: fixed; /* Changed from scroll */
+    background-attachment: fixed;
     background-position: top left, center center;
     background-size: auto,		cover;
-    background-repeat: repeat, no-repeat; /* Added */
+    background-repeat: repeat, no-repeat;
     height: auto;
     left: auto;
     top: auto;
 
-    padding: 0em 4em; /* Changed from 6em 4em */
-    position: fixed; /* Changed from releative */
-    text-align: right; /* Changed from center */
+    padding: 0em 4em;
+    position: fixed;
+    text-align: right;
     width: 100%;
 
-    display: block; /* Changed from block */
-    z-index: 1; /* Added */
+    display: inline-block;
+    z-index: 1;
   }
+
+  /* #header h3 {
+    line-height: 1em;
+  } */
 
   .inner {
     display: -moz-flex;
@@ -98,11 +106,10 @@
     margin: 0;
     padding: 6em 4em;
     width: 100%;
-    min-height: 100vh !important;
   }
 
   #content section:last-child {
-    min-height: 0;
+    min-height: calc(100vh - 20em);
   }
 
 }
@@ -111,7 +118,7 @@
 @media screen and (max-width: 768px) {
 
   h1 {
-    font-size: 1.75em;
+    font-size: 2em;
   }
 
   h2 {
@@ -133,6 +140,10 @@
   #content > section {
     margin: 2.25em 0 0 0;
     padding: 2.25em 0 0 0;
+  }
+
+  #content section:last-child {
+    min-height: calc(100vh - 10em);
   }
 
 }

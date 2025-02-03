@@ -2,10 +2,14 @@
 {% block title %}DAVID PARKER Engineer - Programmer - Developer{% endblock %}
 
 {% block content %}
+{% include 'modals.html' %}
+
 <div id="header">
   <div class="inner">
-    <h1>DAVID PARKER</h1>
-    <h3>Engineer - Programmer - Developer</h3>
+    <div class="title">
+      <h1>DAVID PARKER</h1>
+      <h3>Engineer - Programmer - Developer</h3>
+    </div>
   </div>
 </div>
 
@@ -22,11 +26,19 @@
       foundation for logical thinking and problem solving, which seamlessly transitioned into programming and
       application
       development.</p>
+      <button type="button" class="default-button">Download CV</button>
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="default-button" data-bs-toggle="modal" data-bs-target="#message-modal">Open modal</button>
   </section>
 
   <section id="projects">
     <h2>PROJECTS</h2>
     <p>A number of different projects.</p>
+  </section>
+
+  <section id="skills">
+    <h2>SKILLS</h2>
+    <p>A list of all of my skills and competences.</p>
   </section>
 
   <section id="contact">

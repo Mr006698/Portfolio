@@ -23,5 +23,11 @@
     --icons-hover-colour: #56B78E;
 
     --input-text-colour: #333;
-    --input-background-colour: #C7CCCF;
+    --input-background-colour: #C7CCCF; /* #A7ACAF #D8DDE1 */
+
+    --button-border-colour: #83878B; /*#6B7073;*/
+    --button-background-colour: transparent;
+    --button-text-colour: #71767b;
+    --button-hover-colour: #56B78E; /*#00C6AF;*/
+    --button-alt-hover-colour: #007C4D;
 }
