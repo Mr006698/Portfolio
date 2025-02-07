@@ -1,39 +1,48 @@
 /* Button */
 .default-button {
-  background-color: transparent;
-  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  background-color: var(--button-background-colour);
+  
+  -moz-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
+  -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
+  -ms-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
 
-  border: solid 1px var(--button-border-colour);
+  border: solid 1px var(--ca-gray-300);
   border-radius: 0.5em;
 
   cursor: pointer;
   display: inline-block;
 
   min-width: 8.5em;
-  height: 2.75em;
+  height: 2.8em;
+  line-height: 2.65em;
 
-  font-size: 0.85em;
+  font-size: 0.9em;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  color: var(--button-text-colour)
+  color: var(--ca-gray-600);
 }
 
 .default-button:hover {
-  border-color: var(--button-hover-colour);
-  color: var(--button-hover-colour);
+  border-color: var(--button-border-hover-colour);
+  box-shadow: 0px 0px 0px 4px var(--bs-primary-bg-subtle);
+  color: var(--button-text-hover-colour);
 }
 
 .default-button:active {
-  border-color: var(--button-alt-hover-colour);
-  color: var(--button-alt-hover-colour);
+  border-color: var(--button-border-hover-colour);
+  box-shadow: 0px 0px 0px 4px var(--bs-primary-bg-subtle);
+  color: var(--button-text-hover-colour);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 576px) {
   .default-button {
     width: 100%;
   }
+}
+
+/* Margins */
+#cv-button {
+  margin-top: 2em;
 }

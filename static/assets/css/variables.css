@@ -1,8 +1,8 @@
 :root {
     --default-background-colour: #fff;
 
-    --default-font-colour: #50555E;
-    --default-header-font-colour: #3C4043;
+    --default-font-colour: #50555E; /**/
+    --default-header-font-colour: #3C4043; /*#f4f4f4*/
 
     --default-font: "Muli", Helvetica, sans-serif;
     --default-header-font: "Saira Condensed", Helvetica, sans-serif;
@@ -16,22 +16,39 @@
     --header-base-colour: rgba(255, 255, 255, 0.5);
 
     --link-base-colour: rgba(255, 255, 255, 0.5);
-    --link-hover-colour: #56B78E;
+    --link-hover-colour: #9ec5fe;
     --link-active-colour: #fff;
 
     --icons-base-colour: rgba(255, 255, 255, 0.5);
     --icons-hover-colour: #56B78E;
 
     --input-text-colour: #333;
-    --input-background-colour: #C7CCCF; /* #A7ACAF #D8DDE1 */
+    --input-background-colour: #C7CCCF;
 
-    --button-border-colour: #83878B; /*#6B7073;*/
+    --button-border-colour: #9e9e9e;
     --button-background-colour: transparent;
-    --button-text-colour: #71767b;
-    --button-hover-colour: #56B78E; /*#00C6AF;*/
-    --button-alt-hover-colour: #007C4D;
+    --button-text-colour: #6c757d;
+    --button-text-hover-colour: #accdfd;
+    --button-border-hover-colour: #0dcaf0;
+    --button-active-colour: #0dcaf0;
+    --button-box-shadow: 0px 0px 0px 4px #9ec5fe;
 
     --menu-button-default-colour: #fff;
     --menu-button-hover-colour: #56B78E;
     --menu-button-alt-hover-colour: #007C4D;
+
+    --ca-white: #fff;
+    --ca-black: #000;
+    --ca-gray-dark: #4f4f4f;
+    
+    --ca-gray-50: #fbfbfb;
+    --ca-gray-100: #f5f5f5;
+    --ca-gray-200: #eeeeee;
+    --ca-gray-300: #e0e0e0;
+    --ca-gray-400: #bdbdbd;
+    --ca-gray-500: #9e9e9e;
+    --ca-gray-600: #757575;
+    --ca-gray-700: #616161;
+    --ca-gray-800: #4f4f4f;
+    --ca-gray-900: #262626;
 }

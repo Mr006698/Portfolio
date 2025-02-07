@@ -1,0 +1,19 @@
+#message-modal h2 {
+  font-size: 1.95rem;
+}
+
+#message-modal p {
+  font-size: 0.85rem;
+}
+
+#message-modal button {
+  color: var(--button-text-colour)
+}
+
+#message-modal button:hover {
+  color: var(--button-hover-colour)
+}
+
+.modal-footer {
+  background-color: none;
+}

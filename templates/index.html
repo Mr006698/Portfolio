@@ -8,7 +8,7 @@
   <div class="inner">
     <div class="title">
       <h1>DAVID PARKER</h1>
-      <h3>Engineer - Programmer - Developer</h3>
+      <!-- <h3>Engineer - Programmer - Developer</h3> -->
     </div>
     {% include 'menu.html' %}
   </div>
@@ -27,14 +27,18 @@
       foundation for logical thinking and problem solving, which seamlessly transitioned into programming and
       application
       development.</p>
-      <button type="button" class="default-button">Download CV</button>
-      <!-- Trigger the modal with a button -->
-      <button type="button" class="default-button" data-bs-toggle="modal" data-bs-target="#message-modal">Open modal</button>
+      
+      <div id="cv-button">
+        <a href="{{ url_for('CV') }}" class="default-button" target="_blank">Download CV</a>
+      </div>
   </section>
 
   <section id="projects">
     <h2>PROJECTS</h2>
-    <p>A number of different projects.</p>
+    <div id="gallery">
+      {% include 'projects.html' %}
+    </div>
+    <a href="#" class="default-button" target="_blank">Full Portfolio</a>
   </section>
 
   <section id="competences">
@@ -42,9 +46,15 @@
     <p>A list of all of my skills and competences.</p>
   </section>
 
+  <section id="awards">
+    <h2>AWARDS & CERTIFICATIONS</h2>
+    <p>A list of all of my certifications.</p>
+  </section>
+
   <section id="contact">
     <h2>CONTACT ME</h2>
-    <p>If you have any questions or would like to get in touch, please feel free to contact me</p>
+    <p>If you have any questions or would like to get in touch, please feel free to contact me.</p>
+    {% include 'contact.html' %}
   </section>
 </div>
 
@@ -52,12 +62,12 @@
   <div class="inner">
     <ul class="icons">
       <li>
-        <a href="https://www.linkedin.com/in/david-parker-645108329" class="icon fa-solid fa-brands fa-linkedin">
+        <a href="https://www.linkedin.com/in/david-parker-645108329" target="_blank" class="icon fa-solid fa-brands fa-linkedin">
           <span class="label">LinkedIn</span>
         </a>
       </li>
       <li>
-        <a href="https://github.com/Mr006698" class="icon fa-solid fa-brands fa-github">
+        <a href="https://github.com/Mr006698" target="_blank" class="icon fa-solid fa-brands fa-github">
           <span class="label">Github</span>
         </a>
       </li>

@@ -1,20 +1,23 @@
 <nav class="menu" id="menu-response">
-  <button class="menu-btn" onclick="openMenu()" id="menu-button">
+  <button type="button" class="menu-btn" onclick="openMenu()" id="menu-button">
     <span class="icon fa-solid fa-bars"></span>
   </button>
 
   <div class="menu-list" id="menu-dropdown">
     <li class="menu-link">
-      <a class="menu-item active" href="#about" onclick="">About Me</a>
+      <a class="menu-item active" href="#about" onclick="gotoByScroll('about'); return false;">About Me</a>
     </li>
     <li class="menu-link">
-      <a class="menu-item" href="#projects" onclick="">Projects</a>
+      <a class="menu-item" href="#projects" onclick="gotoByScroll('projects'); return false;">Projects</a>
     </li>
     <li class="menu-link">
-      <a class="menu-item" href="#competences" onclick="">Competences</a>
+      <a class="menu-item" href="#competences" onclick="gotoByScroll('competences'); return false;">Competences</a>
     </li>
     <li class="menu-link">
-      <a class="active" href="#contact" onclick="">Contact Me</a>
+      <a class="menu-item" href="#awards" onclick="gotoByScroll('awards'); return false;">Awards</a>
+    </li>
+    <li class="menu-link">
+      <a class="menu-item" href="#contact" onclick="gotoByScroll('contact'); return false;">Contact Me</a>
     </li>
   </div>
 </nav>

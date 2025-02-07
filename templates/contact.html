@@ -1,0 +1,63 @@
+<div class="row g-4">
+  <div class="col-sm-7 col-12">
+    <form method="POST" class="needs-validation" role="form" id="message-form" novalidate>
+      {{ contact_form.csrf_token }}
+      <div class="row g-4">
+        <div class="col-12 required">
+          {{ contact_form.name(class='form-control', placeholder='Name', autocomplete='name') }}
+          <div class="invalid-feedback">
+            {% if contact_form.name.errors %}
+            {% for error in contact_form.name.errors %}
+            {{ error }}
+            {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="col-12 required">
+          {{ contact_form.email(class='form-control', placeholder='Email', autocomplete='email') }}
+          <div class="invalid-feedback">
+            {% if contact_form.email.errors %}
+            {% for error in contact_form.email.errors %}
+            {{ error }}
+            {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="col-12 required">
+          {{ contact_form.message(class='form-control', placeholder='Message', rows=6) }}
+          <div class="invalid-feedback">
+            {% if contact_form.message.errors %}
+            {% for error in contact_form.message.errors %}
+            {{ error }}
+            {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="col-12" id="form-button">
+          <input class="default-button" type="submit" form="message-form" value="Submit">
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <div class="col-sm-5 col-12">
+
+    <div class="contact-info">
+
+      <div class="contact-info-block">
+        <h4 class="icon fa-solid fa-home"><span class="label">Address</span></h4>
+        <h5>Leamington Spa, <br>CV32 4NS, <br>England, <br>United Kingdom.</h5>
+      </div>
+
+      <div class="contact-info-block">
+        <h4 class="icon fa-solid fa-envelope"><span class="label">Email</span></h4>
+        <h5><a href="mailto:parkers.postbox@gmail.com">parkers.postbox@gmail.com</a></h5>
+      </div>
+
+    </div>
+  </div>
+</div>
