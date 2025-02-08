@@ -5,3 +5,14 @@
 #projects p {
   margin-bottom: 0;
 }
+
+.project-button {
+  -moz-transition: box-shadow .15s ease-in-out, color .15s ease-in-out;
+  -webkit-transition: box-shadow .15s ease-in-out, color .15s ease-in-out;
+  -ms-transition: box-shadow .15s ease-in-out, color .15s ease-in-out;
+  transition: box-shadow .15s ease-in-out, color .15s ease-in-out;
+}
+
+.project-button:hover {
+  box-shadow: var(--button-box-shadow);
+}

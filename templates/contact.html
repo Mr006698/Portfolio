@@ -1,39 +1,21 @@
 <div class="row g-4">
   <div class="col-sm-7 col-12">
-    <form method="POST" class="needs-validation" role="form" id="message-form" novalidate>
+    <form method="POST" class="validate-form" action="{{ url_for('submit') }}" role="form" id="message-form" novalidate>
       {{ contact_form.csrf_token }}
       <div class="row g-4">
         <div class="col-12 required">
           {{ contact_form.name(class='form-control', placeholder='Name', autocomplete='name') }}
-          <div class="invalid-feedback">
-            {% if contact_form.name.errors %}
-            {% for error in contact_form.name.errors %}
-            {{ error }}
-            {% endfor %}
-            {% endif %}
-          </div>
+          <div class="invalid-feedback" id="error-name">error</div>
         </div>
 
         <div class="col-12 required">
           {{ contact_form.email(class='form-control', placeholder='Email', autocomplete='email') }}
-          <div class="invalid-feedback">
-            {% if contact_form.email.errors %}
-            {% for error in contact_form.email.errors %}
-            {{ error }}
-            {% endfor %}
-            {% endif %}
-          </div>
+          <div class="invalid-feedback" id="error-email">error</div>
         </div>
 
         <div class="col-12 required">
           {{ contact_form.message(class='form-control', placeholder='Message', rows=6) }}
-          <div class="invalid-feedback">
-            {% if contact_form.message.errors %}
-            {% for error in contact_form.message.errors %}
-            {{ error }}
-            {% endfor %}
-            {% endif %}
-          </div>
+          <div class="invalid-feedback" id="error-message">error</div>
         </div>
 
         <div class="col-12" id="form-button">

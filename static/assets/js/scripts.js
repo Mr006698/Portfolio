@@ -56,23 +56,47 @@ function gotoByScroll(id) {
     'use strict'
   
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
+    const forms = document.querySelectorAll(".validate-form");
+    const fields = document.querySelectorAll(".form-control");
   
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
       form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-  
-        form.classList.add('was-validated')
+        event.preventDefault();
+        event.stopPropagation();
 
-        // Stop propagation
-        // 
-        // Check return value from flask
-        //   true: clear form - show submitted modal
-        //   false: show error modal.
+        // Validate with server
+        const formData = new FormData(form);
+        fetch("/submit", {
+            method: "POST",
+            body: formData
+        }).then((response) => response.json()).then((result) => {
+            if (result['ok']) {
+                Array.from(fields).forEach(field => {
+                    field.classList.remove("is-valid");
+                    field.classList.remove("is-invalid");
+                });
+
+                form.reset(); // Clear the form
+                // Show success
+
+            } else {
+                Array.from(fields).forEach(field => {
+                    if (result["errors"][field.id]) {
+                        field.classList.remove("is-valid");
+                        field.classList.add("is-invalid");
+                        const errorMsg = document.getElementById("error-" + field.id);
+                        errorMsg.childNodes[0].nodeValue = result["errors"][field.id];
+
+                    } else {
+                        field.classList.remove("is-invalid");
+                        field.classList.add("is-valid");
+                        // const errorMsg = document.getElementById("error-" + field.id);
+                        // errorMsg.childNodes[0].nodeValue = "Success";
+                    }
+                });
+            }
+        });
 
       }, false)
     })
