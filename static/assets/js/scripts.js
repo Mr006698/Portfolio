@@ -58,12 +58,17 @@ function gotoByScroll(id) {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll(".validate-form");
     const fields = document.querySelectorAll(".form-control");
+
+    // Get the submit button so we can disable it to stop multiple clicks
+    const submitBtn = document.getElementById("submit-button");
   
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
       form.addEventListener('submit', event => {
         event.preventDefault();
         event.stopPropagation();
+
+        submitBtn.disabled = true;
 
         // Validate with server
         const formData = new FormData(form);
@@ -78,7 +83,11 @@ function gotoByScroll(id) {
                 });
 
                 form.reset(); // Clear the form
-                // Show success
+                const messageTitle = document.querySelector('.message-title');
+                const messageContent = document.querySelector('.message-content');
+                messageTitle.textContent = 'Message Sent';
+                messageContent.textContent = result['success'];
+                devModal.show()
 
             } else {
                 Array.from(fields).forEach(field => {
@@ -96,6 +105,9 @@ function gotoByScroll(id) {
                     }
                 });
             }
+
+            // Enable submit button
+            submitBtn.disabled = false;
         });
 
       }, false)

@@ -16,7 +16,7 @@
     --header-base-colour: rgba(255, 255, 255, 0.5);
 
     --link-base-colour: rgba(255, 255, 255, 0.5);
-    --link-hover-colour: #9ec5fe;
+    --link-hover-colour: #0dcaf0; /*#9ec5fe;*/
     --link-active-colour: #fff;
 
     --icons-base-colour: rgba(255, 255, 255, 0.5);
@@ -34,8 +34,8 @@
     --button-box-shadow: 0px 0px 0px 4px #cfe2ff;
 
     --menu-button-default-colour: #fff;
-    --menu-button-hover-colour: #56B78E;
-    --menu-button-alt-hover-colour: #007C4D;
+    --menu-button-hover-colour: #0dcaf0;
+    --menu-button-alt-hover-colour: #cfe2ff;
 
     --ca-white: #fff;
     --ca-black: #000;

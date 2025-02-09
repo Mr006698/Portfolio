@@ -11,7 +11,7 @@
 }
 
 #message-modal button:hover {
-  color: var(--button-hover-colour)
+  color: var(--button-text-hover-colour)
 }
 
 .modal-footer {
