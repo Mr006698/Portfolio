@@ -83,10 +83,17 @@ function gotoByScroll(id) {
                 });
 
                 form.reset(); // Clear the form
+                const messageIcon = document.getElementById('modal-icon');
                 const messageTitle = document.querySelector('.message-title');
                 const messageContent = document.querySelector('.message-content');
-                messageTitle.textContent = 'Message Sent';
-                messageContent.textContent = result['success'];
+
+                if (messageIcon.classList.contains('fa-meteor')) {
+                    messageIcon.classList.remove('fa-meteor');
+                    messageIcon.classList.add('fa-satellite-dish'); // fa-comments
+                }
+
+                messageTitle.textContent = 'MESSAGE SENT';
+                messageContent.textContent = 'The Earth is a pale blue dot.'; //result['success'];
                 devModal.show()
 
             } else {

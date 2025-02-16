@@ -165,10 +165,6 @@ body.is-touch .poptrox-popup .closer {
 /* Fix modal pushing items to the right */
 .modal-open {
   width: 100% !important;
-  padding-right: 0 !important;
+  padding-right: 0px !important;
   overflow-y: scroll !important;
-}
-
-#message-modal {
-  padding-right: 16 !important;
 }

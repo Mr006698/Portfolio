@@ -1,19 +1,52 @@
+#message-modal .message-icon {
+  color: var(--icon-message-colour);
+  font-size: 6em;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
 #message-modal h2 {
-  font-size: 1.95rem;
+  /* font-family: var(--default-font); */
+  font-size: 1.75em;
+  line-height: 1;
+  margin: 0.4em 0 0.2em 0;
 }
 
 #message-modal p {
   font-size: 0.85rem;
+  line-height: 1;
 }
 
 #message-modal button {
-  color: var(--button-text-colour)
+  color: var(--default-header-font-colour);
 }
 
 #message-modal button:hover {
-  color: var(--button-text-hover-colour)
+  color: var(--button-text-hover-colour);
 }
 
-.modal-footer {
-  background-color: none;
+.modal-dialog {
+  width: 18em;
+  margin: auto;
+}
+
+/* XXL */
+@media screen and (max-width: 1800px) {
+}
+
+/* XL */
+@media screen and (max-width: 1280px) {
+}
+
+/* L */
+@media screen and (max-width: 980px) {
+}
+
+/* M */
+@media screen and (max-width: 736px) {
+}
+
+/* S */
+@media screen and (max-width: 576px) {
 }

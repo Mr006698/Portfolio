@@ -7,7 +7,7 @@
   -ms-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
 
-  border: solid 1px var(--ca-gray-300);
+  border: solid 1px var(--bs-gray-300);
   border-radius: 0.5em;
 
   cursor: pointer;
@@ -21,7 +21,7 @@
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  color: var(--ca-gray-600);
+  color: var(--bs-gray-600);
 }
 
 .default-button:hover {
